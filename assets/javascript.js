@@ -3,14 +3,18 @@ let ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.lineWidth = '5';
-ctx.strokeStyle = 'red';
-ctx.moveTo(100, 50);
-ctx.lineTo(300, 150);
-ctx.stroke();
+ctx.fillStyle = '#4C8';
+ctx.arc(75, 100, 50, 0, Math.PI);
+ctx.fill();
 
 ctx.beginPath();
-ctx.lineWidth = '10';
-ctx.strokeStyle = '#C24';
-ctx.moveTo(300, 160);
-ctx.lineTo(100, 160);
-ctx.stroke();
+ctx.lineWidth = '5';
+ctx.fillStyle = '#A4A';
+ctx.arc(200, 100, 50, 0, Math.PI * 2);
+ctx.fill();
+
+ctx.beginPath();
+ctx.lineWidth = '5';
+ctx.fillStyle = '#48C';
+ctx.arc(325, 100, 50, Math.PI, 2*Math.PI);
+ctx.fill();
