@@ -1,10 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
 let canvas = document.getElementById('canvas1');
 let ctx = canvas.getContext('2d');
 
-ctx.font = 'bold 20px Verdana, Arial, serif';
-ctx.strokeStyle = '#48B';
-ctx.strokeText('Texte creux',25,100);
-
-ctx.font = 'bold 20px Verdana,Ariel,serif';
-ctx.fillStyle = '#48B';
-ctx.fillText('Texte plein',225,100,);
+let image = document.getElementById('image1');
+image.addEventListener('load', affiche);
+function affiche(){
+ctx.drawImage(image,50,25,500,350);}
+if (image.complete){
+    affiche();
+}else{console.log('image pas afficher');}
+ });
