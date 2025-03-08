@@ -1,11 +1,10 @@
 let canvas = document.getElementById('canvas1');
 let ctx = canvas.getContext('2d');
-let radial = ctx.createRadialGradient(200,100,20,200,100,75);
 
-radial.addColorStop(0, '#4C8');
-radial.addColorStop(0.25,'#48C');
-radial.addColorStop(1, '#A4A');
-ctx.beginPath();
-ctx.fillStyle = radial;
-ctx.arc(200,100,75,0,2*Math.PI);
-ctx.fill();
+ctx.font = 'bold 20px Verdana, Arial, serif';
+ctx.strokeStyle = '#48B';
+ctx.strokeText('Texte creux',25,100);
+
+ctx.font = 'bold 20px Verdana,Ariel,serif';
+ctx.fillStyle = '#48B';
+ctx.fillText('Texte plein',225,100,);
